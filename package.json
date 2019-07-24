@@ -1,0 +1,32 @@
+{
+  "name": "kraken_chat_nodejs",
+  "version": "1.0.0",
+  "description": "chat in node js with socket.io",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SufranjNaweed/Kraken_Chat_NodeJS.git"
+  },
+  "keywords": [
+    "chat",
+    "nodejs",
+    "javascript"
+  ],
+  "author": "Naweed SUFRANJ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SufranjNaweed/Kraken_Chat_NodeJS/issues"
+  },
+  "homepage": "https://github.com/SufranjNaweed/Kraken_Chat_NodeJS#readme",
+  "dependencies": {
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
