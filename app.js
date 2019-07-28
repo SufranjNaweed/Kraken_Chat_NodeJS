@@ -35,7 +35,7 @@ io.sockets.on('connection', (socket, pseudo) => {
         message = ent.encode(message);
         socket.broadcast.emit('message', {pseudo: socket.pseudo, message: message});
     });
-
+    
 });
 
 server.listen(PORT, () => { console.log('app open on server : ' + PORT)});
