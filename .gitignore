@@ -91,3 +91,11 @@ typings/
 .DS_Store
 .idea/*
 .idea
+
+public/scss/*.css.map
+
+public/scss/*/*.css
+public/scss/*/*.css.map
+
+public/scss/plugin/*/*.css
+public/scss/*/*/*.css.map
