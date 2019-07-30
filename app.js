@@ -25,7 +25,13 @@ io.sockets.on('connection', (socket, pseudo) => {
 
     // When we receive 
     socket.on('new_user', (pseudo) => {
-        pseudo          =  ent.encode(pseudo);
+        console.log(pseudo)
+        if (pseudo != null){
+            pseudo          =  ent.encode(pseudo);
+        }
+        else{
+            pseudo          = "anomyme";
+        }
         socket.pseudo   = pseudo;
         socket.broadcast.emit('new_user', pseudo);
     });
