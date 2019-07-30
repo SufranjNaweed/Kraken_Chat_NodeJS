@@ -1,12 +1,28 @@
 <% include ./partials/head %>
 
-    <h1>Realtime Chat</h1>
-
-    <input type="text" name="message" id="message" placeholder="Your Message" size="50" autofocus />
-    <input type="button" id="send_message" value="Send" />
+    <nav class="text-white bg-dark">
+        <h1>KRAKEN CHAT</h1>
+    </nav>
     
-    <section id="chat_zone">
-    </section>
+    <div class="container">
+        <section id="chat_zone">
+        </section>
+    </div>
+    <div class="inputMessage">
+        <div class="col-xs-12 d-flex justify-content-center my-2">
+            <div class="form-group col-xs-11 textInput">
+                <input type="text" name="message" id="message" class="form-control w-100" placeholder="Your Message" size="50" autofocus />
+            </div>
+            <div class="col-xs-1 send ">
+                <button id="send_message" type="button" class="btn btn-outline-primary">
+                    SEND
+                </button>
+            </div>
+        </div>
+    </div>
+
+    
+
     
 
 <% include ./partials/footer %>

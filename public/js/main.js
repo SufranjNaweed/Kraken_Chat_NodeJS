@@ -1,18 +1,18 @@
-
 var socket = io.connect('http://localhost:9000');
+var pseudo = prompt('What\'s your pseudonyme ?');
 
-var pseudo = prompt('Quel est votre pseudo ?');
 socket.emit('new_user', pseudo);
-document.title =  pseudo + " - " + document.title;
+
 
 // on message receive add to page
 socket.on('message', function(data){
     addMessage(data.pseudo, data.message);
 });
 
-//
 socket.on('new_user', function(pseudo){
-    $('#chat_zone').prepend('<p><em>' + pseudo + ' joint the the chat <em><p>');
+    var template =  templateJointUser(pseudo);
+    document.title =  pseudo + " - " + document.title;
+    $('#chat_zone').append(template);
 });
 
 $('#send_message').click(function() {
@@ -24,15 +24,23 @@ $('#send_message').click(function() {
 
 function addMessage(pseudo, message){
     var template =  templateMessage(pseudo, message);
-    $("#chat_zone").prepend(template);
+    $("#chat_zone").append(template);
+    console.log("ok")
 }
 
 function templateMessage(pseudo, message){
     var template = `
-        <div class="message"> 
+        <div class="col-xs-12 col-md-6 bg-secondary message"> 
             <span class="pseudo">${pseudo}</span>
             <span class="message-content">${message}</span>
         </div>
     `;
+    return template;
+}
+
+function templateJointUser(pseudo){
+    var template = `<div class="alert alert-success" role="alert">
+                        ${pseudo}  joint the the chat.
+                    </div>`;
     return template;
 }
