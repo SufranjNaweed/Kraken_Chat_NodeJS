@@ -1,1 +1,1 @@
-Kraken_Chat_NodeJS
+Kraken_Chat_NodeJS Chat made with ExpressJS & Socket.io
